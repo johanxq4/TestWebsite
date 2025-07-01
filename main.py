@@ -57,7 +57,7 @@ def login():
 def welcome():
     if 'user' not in session:
         return redirect(url_for('login'))
-    return f"Hoşgeldin, {session['user']}<br><a href='/logout'>Çıkış</a>"
+    return f"Welcome, {session['user']}<br><a href='/logout'>Logout</a>"
 
 @app.route('/logout')
 def logout():
